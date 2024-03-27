@@ -6,10 +6,14 @@ authors = ["Luiz Felipe <felipekjs36@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = "^3.11"
 pytest = "^8.1.1"
 pylint = "^3.1.0"
+taskipy = "^1.12.2"
 
+[tool.taskipy.tasks]
+test = "python -m pytest src/tests.py -v"
+linter = "pylint ./src"
 
 [build-system]
 requires = ["poetry-core"]
