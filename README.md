@@ -76,9 +76,18 @@ how_many = Orders().combine_orders(orders, n_max)
 assert how_many == expected_orders
 ```
 
+## Como foi estruturado
+Os desafios estão dentro da pasta src, e o arquivo question1.py foi destinado ao primeiro desafio, e o arquivo question2.py ao segundo desafio.
+
+
 ## Como executar 
 
+Criando a imagem docker.
 ```
 docker build -t dbc-challenge .
+```
+
+Rodando o container, o entrypoint executa os testes do projeto.
+```
 docker run -it dbc-challenge
 ```
