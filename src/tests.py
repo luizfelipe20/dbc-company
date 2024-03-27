@@ -43,10 +43,10 @@ def test_combine_orders_success(orders, expected_number_trips):
 
 
 @pytest.mark.parametrize("orders, expected", [
-    (10, "type_error"),
-    ([[], []], "type_error"),
-    ("", "index_error"),
-    ([], "index_error"),
+    (10, "type_error__combine_orders"),
+    ([[], []], "type_error__combine_orders"),
+    ("", "index_error__combine_orders"),
+    ([], "index_error__combine_orders"),
 ])
 def test_combine_orders_invalid_input(orders, expected):
     _orders = orders

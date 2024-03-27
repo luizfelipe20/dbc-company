@@ -24,9 +24,9 @@ class Orders:
                 self.number_trips += 1
                 requests.pop(0)
         except TypeError as exc:
-            raise Exception(f"type_error: {exc}")
+            raise Exception(f"type_error__combine_orders: {exc}")
         except IndexError as exc:
-            raise Exception(f"index_error: {exc}")
+            raise Exception(f"index_error__combine_orders: {exc}")
 
         if len(requests) > 1:
             return self.combine_orders(requests, n_max)
